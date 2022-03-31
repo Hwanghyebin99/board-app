@@ -1,8 +1,8 @@
 <div>
     <div [formGroup]="form">
-        <input formControlName="code" type="text">
-        <input formControlName="num" type="text">
-        <input formControlName="cost" type="text">
+        코드<input formControlName="code" type="text">
+        가격<input formControlName="cost" type="text">
+        개수<input formControlName="num" type="text">
         <button class="add-button" type="button" [disabled]="form.disabled" (click)="onClickAdd()">추가</button>
     </div>
     <div>

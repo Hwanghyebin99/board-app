@@ -9,7 +9,7 @@ export class BoardService {
 
   constructor(private http: HttpClient) { }
 
-  submit():Observable<any> {
+  submit(data):Observable<any> {
     return this.http.get('http://localhost:8000/stocks/fds');
   }
 }
