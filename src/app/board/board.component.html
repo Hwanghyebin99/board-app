@@ -1,0 +1,33 @@
+<div>
+    <div [formGroup]="form">
+        <input formControlName="code" type="text">
+        <input formControlName="num" type="text">
+        <input formControlName="cost" type="text">
+        <button class="add-button" type="button" [disabled]="form.disabled" (click)="onClickAdd()">추가</button>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>코드</th>
+                    <th>가격</th>
+                    <th>개수</th>
+                    <th>삭제</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of data">
+                    <td>{{row.code}}</td>
+                    <td>{{row.num}}</td>
+                    <td>{{row.cost}}</td>
+                    <td>
+                        <button (click)="removeData(row.code)">삭제</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <button>완료</button>
+    </div>
+</div>
